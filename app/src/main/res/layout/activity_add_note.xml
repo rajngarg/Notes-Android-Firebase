@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".activities.AddNoteActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Add New Note" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/product_sans_bold"
+            android:hint="Title" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_note"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/shape_et_note"
+            android:fontFamily="@font/product_sans_regular"
+            android:gravity="start"
+            android:hint="Note"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:onClick="saveNote"
+        android:text="Save" />
+
+</LinearLayout>
